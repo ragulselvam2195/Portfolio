@@ -1,0 +1,151 @@
+/* ===============================================
+   PROJECT NAME OVERLAY ENHANCEMENT
+   =============================================== */
+
+/* Enhanced Project Overlay with Project Name Display */
+.project-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Project Name on Overlay - Appears on Hover */
+.project-overlay::before {
+    content: attr(data-project-name);
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    padding: 0 2rem;
+    background: linear-gradient(120deg, #fff, #00d4ff, #8a2be2, #fff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: translateY(30px) scale(0.8);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
+    animation: gradientShift 3s ease-in-out infinite;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Show project name on hover */
+.portfolio-box:hover .project-overlay::before {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+/* View Project Text - Secondary Overlay Element */
+.project-overlay::after {
+    content: 'Click to View Details';
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    background: rgba(0, 212, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s;
+}
+
+.portfolio-box:hover .project-overlay::after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Hover Effects for Better Visibility */
+.portfolio-box:hover .project-overlay {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Icon Indicator on Image */
+.project-image-wrapper::after {
+    content: '\f06e';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 212, 255, 0.9);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+}
+
+.portfolio-box:hover .project-image-wrapper::after {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* Responsive Design for Project Names */
+@media (max-width: 768px) {
+    .project-overlay::before {
+        font-size: 2.2rem;
+        padding: 0 1.5rem;
+    }
+
+    .project-overlay::after {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .project-image-wrapper::after {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-overlay::before {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+
+    .project-overlay::after {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .project-image-wrapper::after {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        top: 1rem;
+        right: 1rem;
+    }
+}

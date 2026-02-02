@@ -1,0 +1,450 @@
+/* ========================================
+   ADVANCED ANIMATION STYLES
+   ======================================== */
+
+/* Character Fade In Animation */
+@keyframes charFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) rotateX(-90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+/* Ripple Effect */
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Button and Interactive Element Transitions */
+.btn,
+.social-media a,
+button {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 3D Tilt Cards */
+.portfolio-box,
+.skills-box {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.portfolio-icon i {
+    transition: transform 0.3s ease;
+}
+
+/* Section Entrance Animations */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Parallax Headings */
+.heading {
+    transition: transform 0.3s ease-out;
+}
+
+/* Image Reveal Animation */
+.img-box img {
+    will-change: clip-path, transform;
+}
+
+/* Smooth Hover States */
+.portfolio-box:hover,
+.skills-box:hover {
+    will-change: transform;
+}
+
+/* Gradient Animation for Backgrounds */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Floating Animation Enhancement */
+@keyframes advancedFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-10px) rotate(-2deg);
+    }
+}
+
+.img-box {
+    animation: advancedFloat 6s ease-in-out infinite;
+}
+
+/* Glitch Effect for Headings (Subtle) */
+@keyframes glitch {
+    0% {
+        text-shadow: 0 0 transparent;
+    }
+
+    20% {
+        text-shadow: -2px 0 rgba(2, 132, 199, 0.3),
+            2px 0 rgba(56, 189, 248, 0.3);
+    }
+
+    40% {
+        text-shadow: 2px 0 rgba(2, 132, 199, 0.3),
+            -2px 0 rgba(56, 189, 248, 0.3);
+    }
+
+    60% {
+        text-shadow: 0 0 transparent;
+    }
+
+    100% {
+        text-shadow: 0 0 transparent;
+    }
+}
+
+/* Gradient Text Animation */
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.home-content h1 {
+    background-size: 200% auto;
+    animation: gradientText 3s ease infinite;
+}
+
+/* Neon Glow Effect */
+@keyframes neonGlow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 5px rgba(2, 132, 199, 0.5)) drop-shadow(0 0 10px rgba(2, 132, 199, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 10px rgba(2, 132, 199, 0.8)) drop-shadow(0 0 20px rgba(2, 132, 199, 0.5)) drop-shadow(0 0 30px rgba(2, 132, 199, 0.3));
+    }
+}
+
+/* Skill Bar Glow on Activation */
+.skills-column.animate-bars .bar span {
+    animation-name: skillBarFill, neonGlow;
+    animation-duration: 2s, 2s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-delay: 0s, 2s;
+    animation-iteration-count: 1, infinite;
+}
+
+@keyframes skillBarFill {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Card Stack Effect */
+@keyframes cardStack {
+    from {
+        transform: translateY(100px) rotate(10deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+}
+
+/* Morphing Background */
+.home {
+    position: relative;
+    overflow: hidden;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.05) 0%, transparent 70%);
+    animation: morphBackground 15s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes morphBackground {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(20%, 20%) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20%, 10%) scale(0.9);
+    }
+}
+
+/* Text Shadow Breathe Effect */
+@keyframes breatheShadow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px rgba(2, 132, 199, 0.3);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(2, 132, 199, 0.6),
+            0 0 30px rgba(2, 132, 199, 0.4);
+    }
+}
+
+.heading span {
+    animation: breatheShadow 3s ease-in-out infinite;
+}
+
+/* Liquid Button Effect */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Elastic Bounce */
+@keyframes elasticBounce {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    65% {
+        transform: scale(0.98);
+    }
+
+    75% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* SVG Path Drawing Effect (if you add SVGs later) */
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Particle System Optimization */
+#particle-canvas {
+    opacity: 0;
+    animation: fadeInCanvas 2s ease 0.5s forwards;
+}
+
+@keyframes fadeInCanvas {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scroll Progress Bar Pulse */
+#scroll-progress {
+    box-shadow: 0 0 10px rgba(2, 132, 199, 0.5);
+    animation: progressPulse 2s ease-in-out infinite;
+}
+
+@keyframes progressPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(2, 132, 199, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(2, 132, 199, 0.8),
+            0 0 30px rgba(2, 132, 199, 0.4);
+    }
+}
+
+/* Interactive Hover Brightness */
+.portfolio-box:hover img,
+.skills-box:hover {
+    filter: brightness(1.1);
+}
+
+/* Stagger Animation Utility Classes */
+.stagger-1 {
+    animation-delay: 0.1s !important;
+}
+
+.stagger-2 {
+    animation-delay: 0.2s !important;
+}
+
+.stagger-3 {
+    animation-delay: 0.3s !important;
+}
+
+.stagger-4 {
+    animation-delay: 0.4s !important;
+}
+
+.stagger-5 {
+    animation-delay: 0.5s !important;
+}
+
+/* Performance Optimization */
+.portfolio-box,
+.skills-box,
+.btn,
+.social-media a,
+.img-box {
+    will-change: transform;
+}
+
+/* Reduce animations for better performance on mobile */
+@media (max-width: 768px) {
+
+    /* Disable particle background on mobile */
+    #particle-canvas,
+    #cursor-trail {
+        display: none;
+    }
+
+    /* Simplify 3D effects */
+    .portfolio-box:hover,
+    .skills-box:hover {
+        transform: scale(1.02) !important;
+    }
+
+    /* Reduce animation complexity */
+    .img-box {
+        animation: floatImage 6s ease-in-out infinite;
+    }
+}
+
+/* Dark Mode Support (Future Enhancement) */
+@media (prefers-color-scheme: dark) {
+    /* Adjust particle and glow colors for dark mode if needed */
+}
+
+/* High Performance Mode */
+@media (prefers-reduced-motion: reduce) {
+
+    /* Disable complex animations */
+    #particle-canvas,
+    #cursor-trail {
+        display: none;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Loading Animation for Heavy Effects */
+@keyframes shimmerLoad {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading {
+    background: linear-gradient(90deg,
+            rgba(2, 132, 199, 0.1) 0%,
+            rgba(2, 132, 199, 0.3) 50%,
+            rgba(2, 132, 199, 0.1) 100%);
+    background-size: 1000px 100%;
+    animation: shimmerLoad 2s infinite;
+}

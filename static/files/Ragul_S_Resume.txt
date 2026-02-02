@@ -1,0 +1,5 @@
+Ragul.S
+BE.CSE Student at Excel Engineering College
+Skills: HTML, CSS, JS, Python, SQL
+
+[This is a placeholder for the actual CV/Resume]

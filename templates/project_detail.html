@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project.title }} | Ragul.S Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/project-detail.css') }}">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="project-header">
+        <div class="header-content">
+            <a href="/" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+            <a href="/" class="logo">Ragul<span class="highlight">.S</span></a>
+        </div>
+    </header>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="hero-background">
+            <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="project-badge">
+                <span class="category-badge">{{ project.category }}</span>
+                <span class="status-badge {% if project.status == 'In Progress' %}in-progress{% endif %}">
+                    {{ project.status }}
+                </span>
+            </div>
+            <h1 class="project-title">{{ project.title }}</h1>
+            <p class="project-tagline">{{ project.description }}</p>
+            <div class="hero-actions">
+                <a href="{{ project.live_demo }}" class="hero-btn primary">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                </a>
+                <a href="{{ project.github }}" class="hero-btn secondary">
+                    <i class="fa-brands fa-github"></i>
+                    View Code
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Container -->
+    <div class="project-container">
+        <!-- Sidebar Navigation -->
+        <aside class="project-sidebar">
+            <nav class="sidebar-nav">
+                <a href="#overview" class="nav-link active">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Overview
+                </a>
+                <a href="#features" class="nav-link">
+                    <i class="fa-solid fa-star"></i>
+                    Features
+                </a>
+                <a href="#tech-stack" class="nav-link">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Tech Stack
+                </a>
+                <a href="#challenges" class="nav-link">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Challenges
+                </a>
+                <a href="#outcomes" class="nav-link">
+                    <i class="fa-solid fa-trophy"></i>
+                    Outcomes
+                </a>
+            </nav>
+
+            <!-- Quick Info Card -->
+            <div class="quick-info-card">
+                <h3>Project Info</h3>
+                <div class="info-item">
+                    <i class="fa-solid fa-calendar"></i>
+                    <div>
+                        <span class="label">Completed</span>
+                        <span class="value">2024</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-user"></i>
+                    <div>
+                        <span class="label">Developer</span>
+                        <span class="value">Ragul.S</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <div>
+                        <span class="label">Version</span>
+                        <span class="value">1.0.0</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="project-main">
+            <!-- Overview Section -->
+            <section id="overview" class="content-section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Project Overview
+                </h2>
+                <div class="content-card">
+                    <p class="overview-text">{{ project.description }}</p>
+
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <div>
+                                <h4>Objective</h4>
+                                <p>Build a professional, scalable solution that addresses real-world problems with
+                                    modern technology.</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <h4>Target Audience</h4>
+                                <p>Designed for end-users seeking efficient, user-friendly digital solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="content-section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-star"></i>
+                    Key Features
+                </h2>
+                <div class="features-grid">
+                    {% for feature in project.features %}
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-check-circle"></i>
+                        </div>
+                        <h3>{{ feature }}</h3>
+                        <p>Advanced implementation ensuring optimal performance and user experience.</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- Tech Stack Section -->
+            <section id="tech-stack" class="content-section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Technology Stack
+                </h2>
+                <div class="content-card">
+                    <div class="tech-stack-grid">
+                        {% for tech in project.tech_stack %}
+                        <div class="tech-item">
+                            <i class="fa-solid fa-cube"></i>
+                            <span>{{ tech }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="architecture-section">
+                        <h3>Architecture Highlights</h3>
+                        <ul class="architecture-list">
+                            <li><i class="fa-solid fa-check"></i> Modular and scalable codebase</li>
+                            <li><i class="fa-solid fa-check"></i> RESTful API design principles</li>
+                            <li><i class="fa-solid fa-check"></i> Responsive and mobile-first approach</li>
+                            <li><i class="fa-solid fa-check"></i> Security best practices implemented</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Challenges Section -->
+            <section id="challenges" class="content-section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Challenges & Solutions
+                </h2>
+                <div class="challenges-container">
+                    <div class="challenge-card">
+                        <div class="challenge-header">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <h3>Technical Challenges</h3>
+                        </div>
+                        <p>Implementing complex features while maintaining code quality and performance standards.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-header">
+                            <i class="fa-solid fa-check-double"></i>
+                            <h3>Solutions Implemented</h3>
+                        </div>
+                        <p>Utilized modern design patterns, comprehensive testing, and continuous integration practices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lessons-card">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Lessons Learned</h3>
+                    <ul>
+                        <li>Importance of planning and architectural decisions early in the development process</li>
+                        <li>Value of user feedback in shaping features and improvements</li>
+                        <li>Benefits of maintaining clean, documented code for future scalability</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Outcomes Section -->
+            <section id="outcomes" class="content-section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-trophy"></i>
+                    Project Outcomes
+                </h2>
+                <div class="outcomes-grid">
+                    <div class="outcome-card">
+                        <i class="fa-solid fa-rocket"></i>
+                        <h3>Performance</h3>
+                        <p>Achieved excellent performance metrics with fast load times and smooth user experience.</p>
+                    </div>
+                    <div class="outcome-card">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Security</h3>
+                        <p>Implemented robust security measures protecting user data and preventing vulnerabilities.</p>
+                    </div>
+                    <div class="outcome-card">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <h3>Responsive</h3>
+                        <p>Fully responsive design ensuring perfect experience across all devices and screen sizes.</p>
+                    </div>
+                    <div class="outcome-card">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <h3>Scalable</h3>
+                        <p>Built with scalability in mind, ready to handle growth and future enhancements.</p>
+                    </div>
+                </div>
+
+                <div class="impact-section">
+                    <h3>Real-World Impact</h3>
+                    <p>This project demonstrates practical problem-solving skills and the ability to deliver complete,
+                        production-ready solutions. The implementation showcases attention to detail, modern development
+                        practices, and a user-centered approach to software development.</p>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="cta-content">
+                    <h2>Interested in This Project?</h2>
+                    <p>Check out the live demo or explore the source code on GitHub</p>
+                    <div class="cta-buttons">
+                        <a href="{{ project.live_demo }}" class="cta-btn primary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Live Demo
+                        </a>
+                        <a href="{{ project.github }}" class="cta-btn secondary">
+                            <i class="fa-brands fa-github"></i>
+                            View on GitHub
+                        </a>
+                        <a href="/#contact" class="cta-btn tertiary">
+                            <i class="fa-solid fa-envelope"></i>
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Ragul.S | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="/#about">About</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/project-detail.js') }}"></script>
+</body>
+
+</html>

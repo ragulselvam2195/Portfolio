@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragul.S | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/advanced-animations.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about-section.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects-section.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects-modal-advanced.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/certificates-section.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/project-name-overlay.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile-optimization.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/education-section.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact-section.css') }}">
+</head>
+
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <header class="header">
+        <a href="#" class="logo">Ragul<span class="highlight">.S</span></a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#certificates">Internships</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div id="menu-icon" class="fa-solid fa-bars"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Ragul.S</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>BE.CSE Student at Excel Engineering College. Passionate about developing professional web applications
+                and software solutions.</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/ragul-s-73a3872b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/rocky._ragul._?igsh=MTM1MWJmN3R4dnRmaQ==" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <a href="{{ url_for('download_cv') }}" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <!-- Placeholder for profile image, using a gradient placeholder for now -->
+            <div class="img-box">
+                <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Ragul S"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-header">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p class="about-subtitle">Crafting Digital Experiences with Code & Creativity</p>
+        </div>
+
+        <div class="about-container">
+            <!-- Left: Profile & Introduction -->
+            <div class="about-profile">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Ragul S">
+                        <div class="profile-ring"></div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>Ragul.S</h3>
+                        <p class="profile-role">Computer Science Engineer</p>
+                        <div class="profile-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Excel Engineering College</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4 class="stat-number" data-target="15">0</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4 class="stat-number" data-target="8">0</h4>
+                            <p>Tech Stacks</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4 class="stat-number" data-target="2">0</h4>
+                            <p>Years Learning</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4 class="stat-number" data-target="100">0</h4>
+                            <p>Commitment %</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Journey & Highlights -->
+            <div class="about-details">
+                <div class="about-intro">
+                    <h3 class="intro-title">Hello World! 👋</h3>
+                    <p>I'm Ragul.S, a passionate <strong>Computer Science Engineering</strong> student at Excel
+                        Engineering College with an insatiable curiosity for technology and innovation.</p>
+                    <p>I specialize in building <strong>responsive web applications</strong> and automating complex
+                        tasks with Python. My mission is to create beautiful, functional digital solutions that solve
+                        real-world problems and make a meaningful impact.</p>
+                </div>
+
+                <!-- Journey Timeline -->
+                <div class="journey-timeline">
+                    <h4 class="section-label">
+                        <i class="fa-solid fa-route"></i>
+                        My Journey
+                    </h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023 - Present</span>
+                                <h5>BE.CSE Student</h5>
+                                <p>Pursuing Computer Science Engineering at Excel Engineering College</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022 - 2023</span>
+                                <h5>Full-Stack Explorer</h5>
+                                <p>Mastered HTML, CSS, JavaScript, Python & modern frameworks</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024 - Future</span>
+                                <h5>AI Integration Focus</h5>
+                                <p>Diving deep into AI, ML, and advanced full-stack development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Tags -->
+                <div class="skills-tags-section">
+                    <h4 class="section-label">
+                        <i class="fa-solid fa-fire"></i>
+                        Core Expertise
+                    </h4>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">SQL/MySQL</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">API Development</span>
+                    </div>
+                </div>
+
+                <!-- Highlights -->
+                <div class="highlights-section">
+                    <h4 class="section-label">
+                        <i class="fa-solid fa-star"></i>
+                        What Drives Me
+                    </h4>
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <h5>Problem Solver</h5>
+                            <p>Love tackling complex challenges with elegant solutions</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fa-solid fa-rocket"></i>
+                            <h5>Fast Learner</h5>
+                            <p>Always eager to explore new tech and improve skills</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fa-solid fa-palette"></i>
+                            <h5>Design Enthusiast</h5>
+                            <p>Creating stunning interfaces that users love</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fa-solid fa-users"></i>
+                            <h5>Team Player</h5>
+                            <p>Collaborative mindset with strong communication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         EDUCATION SECTION - TIMELINE DESIGN
+         ============================================ -->
+    <section class="education" id="education">
+        <div class="education-container">
+            <div class="education-header">
+                <h2 class="heading">My <span>Education</span></h2>
+                <p class="education-subtitle">Academic journey and qualifications</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Education Item 1: College -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="year">2023 - 2027</span>
+                        <span class="status ongoing">Ongoing</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="education-card">
+                            <div class="card-icon college-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>Bachelor of Engineering in Computer Science</h3>
+                                <h4>Excel Engineering College</h4>
+                                <div class="education-details">
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-building-columns"></i>
+                                        <span>Department: Computer Science & Engineering</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span>Duration: 4 Years (2023-2027)</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>Namakkal, Tamil Nadu</span>
+                                    </div>
+                                </div>
+                                <p class="education-description">
+                                    Currently pursuing Bachelor's degree in Computer Science and Engineering.
+                                    Focusing on software development, web technologies, and data structures.
+                                </p>
+                                <div class="education-tags">
+                                    <span class="tag">Programming</span>
+                                    <span class="tag">Web Development</span>
+                                    <span class="tag">Data Structures</span>
+                                    <span class="tag">Algorithms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 2: Higher Secondary -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="year">2023</span>
+                        <span class="status completed">Completed</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="education-card">
+                            <div class="card-icon school-icon">
+                                <i class="fa-solid fa-school"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>Higher Secondary Education (XII)</h3>
+                                <h4>Government Boys Higher Secondary School, Attur</h4>
+                                <div class="education-details">
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-book"></i>
+                                        <span>Stream: Science</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                        <span>Year of Completion: 2023</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>Attur, Tamil Nadu</span>
+                                    </div>
+                                </div>
+                                <p class="education-description">
+                                    Completed higher secondary education with focus on Science stream, laying strong
+                                    foundation for engineering studies.
+                                </p>
+                                <div class="education-tags">
+                                    <span class="tag">Mathematics</span>
+                                    <span class="tag">Physics</span>
+                                    <span class="tag">Chemistry</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 3: Secondary -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="year">2021</span>
+                        <span class="status completed">Completed</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="education-card">
+                            <div class="card-icon school-icon">
+                                <i class="fa-solid fa-school-flag"></i>
+                            </div>
+                            <div class="card-info">
+                                <h3>Secondary Education (X)</h3>
+                                <h4>Government High School, Attur</h4>
+                                <div class="education-details">
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Board: Tamil Nadu State Board</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                        <span>Year of Completion: 2021</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>Attur, Tamil Nadu</span>
+                                    </div>
+                                </div>
+                                <p class="education-description">
+                                    Completed secondary education with strong academic performance, developing
+                                    fundamentals in core subjects.
+                                </p>
+                                <div class="education-tags">
+                                    <span class="tag">Science</span>
+                                    <span class="tag">Mathematics</span>
+                                    <span class="tag">English</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="skills-row">
+            <!-- Frontend -->
+            <div class="skills-column">
+                <h3 class="title">Frontend Development</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>HTML5 <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>CSS3 <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>JavaScript <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>React (Basic) <span>60%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend & Tools -->
+            <div class="skills-column">
+                <h3 class="title">Backend & Tools</h3>
+                <div class="skills-box">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Python <span>95%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Flask/Django <span>75%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>SQL / MySQL <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progress">
+                            <h3>Git / GitHub <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CERTIFICATES SECTION
+         ============================================ -->
+    <section class="certificates" id="certificates">
+        <div class="certificates-header">
+            <h2 class="heading">My <span>Internships</span></h2>
+            <p class="certificates-subtitle">Professional internship experiences and accomplishments</p>
+        </div>
+
+        <div class="certificates-grid">
+            <!-- Certificate 1: Maxpro Infotech - Java Internship -->
+            <div class="certificate-card">
+                <div class="certificate-header">
+                    <div class="certificate-badge">
+                        <i class="fa-solid fa-award badge-icon"></i>
+                        <span class="badge-text">Internship</span>
+                    </div>
+                    <div class="certificate-date">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        31.12.2024
+                    </div>
+                </div>
+
+                <div class="certificate-image-container">
+                    <img src="{{ url_for('static', filename='images/certificates/maxpro-infotech-cert.jpg') }}"
+                        alt="Maxpro Infotech Java Internship Certificate">
+                    <button class="magnify-btn" aria-label="View full certificate">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+
+                <div class="certificate-details">
+                    <h3 class="certificate-title">Java Internship Certificate</h3>
+
+                    <div class="certificate-company">
+                        <div class="company-logo">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="company-name">Maxpro Infotech</span>
+                    </div>
+
+                    <div class="certificate-info">
+                        <div class="info-item">
+                            <span class="info-label">
+                                <i class="fa-solid fa-building"></i>
+                                Topic
+                            </span>
+                            <span class="info-value">Java Development</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">
+                                <i class="fa-solid fa-clock"></i>
+                                Duration
+                            </span>
+                            <span class="info-value">7 Days</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">
+                                <i class="fa-solid fa-calendar"></i>
+                                Period
+                            </span>
+                            <span class="info-value">23.12.2024 - 31.12.2024</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Location
+                            </span>
+                            <span class="info-value">Salem, India</span>
+                        </div>
+                    </div>
+
+                    <p class="certificate-description">
+                        Successfully completed a 7-day intensive Java internship focusing on core Java concepts,
+                        object-oriented programming, and modern software deployment practices. Gained hands-on
+                        experience working alongside experienced developers at Maxpro Infotech.
+                    </p>
+
+                    <div class="certificate-tags">
+                        <span class="cert-tag">Java</span>
+                        <span class="cert-tag">OOP</span>
+                        <span class="cert-tag">Software Development</span>
+                        <span class="cert-tag">Team Collaboration</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate 2: Marcello Tech - Python Internship -->
+            <div class="certificate-card">
+                <div class="certificate-header">
+                    <div class="certificate-badge">
+                        <i class="fa-solid fa-certificate badge-icon"></i>
+                        <span class="badge-text">Internship</span>
+                    </div>
+                    <div class="certificate-date">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        31.12.2025
+                    </div>
+                </div>
+
+                <div class="certificate-image-container">
+                    <img src="{{ url_for('static', filename='images/certificates/marcello-tech-cert.jpg') }}"
+                        alt="Marcello Tech Python Application Development Certificate">
+                    <button class="magnify-btn" aria-label="View full certificate">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+
+                <div class="certificate-details">
+                    <h3 class="certificate-title">Python Application Development</h3>
+
+                    <div class="certificate-company">
+                        <div class="company-logo">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <span class="company-name">Marcello Tech</span>
+                    </div>
+
+                    <div class="certificate-info">
+                        <div class="info-item">
+                            <span class="info-label">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                Topic
+                            </span>
+                            <span class="info-value">Python Application Dev</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">
+                                <i class="fa-solid fa-clock"></i>
+                                Duration
+                            </span>
+                            <span class="info-value">15 Days</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">
+                                <i class="fa-solid fa-calendar"></i>
+                                Period
+                            </span>
+                            <span class="info-value">15.12.2025 - 30.12.2025</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Location
+                            </span>
+                            <span class="info-value">Trichy, India</span>
+                        </div>
+                    </div>
+
+                    <p class="certificate-description">
+                        Completed a comprehensive 15-day Python Application Development internship programme.
+                        Developed expertise in building full-stack Python applications, working with frameworks,
+                        databases, and modern development methodologies under the guidance of industry professionals.
+                    </p>
+
+                    <div class="certificate-tags">
+                        <span class="cert-tag">Python</span>
+                        <span class="cert-tag">Flask/Django</span>
+                        <span class="cert-tag">Full-Stack Development</span>
+                        <span class="cert-tag">Database Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certificates Statistics -->
+        <div class="certificates-stats">
+            <div class="stat-box">
+                <i class="fa-solid fa-briefcase stat-icon"></i>
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Internships</div>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-code stat-icon"></i>
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Technologies</div>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-calendar-check stat-icon"></i>
+                <div class="stat-number" data-target="22">0</div>
+                <div class="stat-label">Total Days</div>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-building stat-icon"></i>
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Companies</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Lightbox Modal -->
+    <div class="certificate-lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img src="" alt="Certificate Full View">
+        </div>
+    </div>
+
+    <section class="portfolio" id="projects">
+        <div class="projects-header">
+            <h2 class="heading">Featured <span>Projects</span></h2>
+            <p class="projects-subtitle">Showcasing my latest work in web development, AI, and automation</p>
+        </div>
+
+        <!-- Project Filters -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fa-solid fa-grid-2"></i>
+                All Projects
+            </button>
+            <button class="filter-btn" data-filter="web">
+                <i class="fa-solid fa-globe"></i>
+                Web Apps
+            </button>
+            <button class="filter-btn" data-filter="ai">
+                <i class="fa-solid fa-brain"></i>
+                AI/ML
+            </button>
+            <button class="filter-btn" data-filter="automation">
+                <i class="fa-solid fa-robot"></i>
+                Automation
+            </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="portfolio-container">
+            <!-- Project 1: Portfolio Website -->
+            <div class="portfolio-box" data-category="web">
+                <a href="/project/portfolio-website" class="project-card-link">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop"
+                            alt="Portfolio Website">
+                        <div class="project-overlay" data-project-name="Portfolio Website"></div>
+                    </div>
+                </a>
+
+                <div class="project-content">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <span class="project-status">Completed</span>
+                    </div>
+
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-description">Modern, responsive portfolio with glassmorphism UI, custom cursor,
+                        and advanced animations</p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">HTML5</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="project-btn view-details" data-title="Portfolio Website"
+                            data-desc="A high-performance personal portfolio website built with Flask and Vanilla JS. Features include a custom cursor, scroll reveal animations, glassmorphism UI, and smooth page transitions. Fully responsive design optimized for all devices."
+                            data-tech="Python 3.10+, Flask 2.0+, Jinja2, HTML5/CSS3, Vanilla JavaScript"
+                            data-features="Custom Cursor|Scroll Animations|Glassmorphism Design|Responsive Layout|Contact Form Integration"
+                            data-demo="#" data-github="#" onclick="openProjectModal(this)">
+                            <i class="fa-solid fa-eye"></i>
+                            View Details
+                        </button>
+                        <a href="#" class="project-link" title="Live Demo">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: AI Chatbot -->
+            <div class="portfolio-box" data-category="ai">
+                <a href="/project/ai-chatbot" class="project-card-link">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop"
+                            alt="AI Chatbot">
+                        <div class="project-overlay" data-project-name="AI Chatbot System"></div>
+                    </div>
+                </a>
+
+                <div class="project-content">
+                    <div class="project-header">
+                        <div class="project-icon ai">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <span class="project-status active">In Progress</span>
+                    </div>
+
+                    <h3 class="project-title">AI Chatbot System</h3>
+                    <p class="project-description">Intelligent NLP-powered chatbot with context understanding and
+                        sentiment analysis</p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">FastAPI</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="project-btn view-details" data-title="AI Chatbot System"
+                            data-desc="An intelligent chatbot tailored for customer service interactions. Utilizes NLTK for natural language processing and TensorFlow for intent classification. Features include conversation history, sentiment analysis, and multi-language support."
+                            data-tech="Python 3.9+, TensorFlow 2.x, NLTK, NumPy, Pandas, FastAPI"
+                            data-features="NLP Processing|Intent Recognition|Sentiment Analysis|Context Awareness|Multi-language Support|REST API"
+                            data-demo="#" data-github="#" onclick="openProjectModal(this)">
+                            <i class="fa-solid fa-eye"></i>
+                            View Details
+                        </button>
+                        <a href="#" class="project-link" title="Demo">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Campus Connect -->
+            <div class="portfolio-box" data-category="web">
+                <a href="/project/campus-connect" class="project-card-link">
+                    <div class="project-image-wrapper">
+                        <img src="{{ url_for('static', filename='images/campus-connect-dashboard.png') }}"
+                            alt="Campus Connect Portal Dashboard">
+                        <div class="project-overlay" data-project-name="Campus Connect"></div>
+                    </div>
+                </a>
+
+                <div class="project-content">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <span class="project-status">Completed</span>
+                    </div>
+
+                    <h3 class="project-title">Campus Connect Portal</h3>
+                    <p class="project-description">Comprehensive student management system with advanced dashboard and
+                        analytics</p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">Chart.js</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="project-btn view-details" data-title="Campus Connect Portal"
+                            data-desc="A comprehensive student and staff management portal for educational institutions. Features include attendance tracking, marks management, leave requests, timetable generation, and role-based dashboards for admin, staff, and students."
+                            data-tech="Python Flask, SQLite, SQLAlchemy, Bootstrap 5, JavaScript, Chart.js"
+                            data-features="User Authentication|Role-based Access|Attendance System|Marks Management|Leave Requests|Analytics Dashboard|Timetable Generator"
+                            data-demo="#" data-github="#" onclick="openProjectModal(this)">
+                            <i class="fa-solid fa-eye"></i>
+                            View Details
+                        </button>
+                        <a href="#" class="project-link" title="Live Demo">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Task Automation -->
+            <div class="portfolio-box" data-category="automation">
+                <a href="/project/automation-suite" class="project-card-link">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop"
+                            alt="Automation Tools">
+                        <div class="project-overlay" data-project-name="Automation Suite"></div>
+                    </div>
+                </a>
+
+                <div class="project-content">
+                    <div class="project-header">
+                        <div class="project-icon automation">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <span class="project-status">Completed</span>
+                    </div>
+
+                    <h3 class="project-title">Python Automation Suite</h3>
+                    <p class="project-description">Collection of automation scripts for data processing and workflow
+                        optimization</p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">BeautifulSoup</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="project-btn view-details" data-title="Python Automation Suite"
+                            data-desc="A comprehensive collection of automation tools for various tasks including web scraping, data processing, file management, and report generation. Reduces manual work by 80% with intelligent batch processing and scheduling capabilities."
+                            data-tech="Python 3.9+, Selenium, Pandas, BeautifulSoup, Schedule, Openpyxl"
+                            data-features="Web Scraping|Data Processing|File Automation|Report Generation|Email Automation|Scheduled Tasks"
+                            data-demo="#" data-github="#" onclick="openProjectModal(this)">
+                            <i class="fa-solid fa-eye"></i>
+                            View Details
+                        </button>
+                        <a href="#" class="project-link" title="Documentation">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: E-Commerce Platform -->
+            <div class="portfolio-box" data-category="web">
+                <div class="project-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop"
+                        alt="E-Commerce">
+                    <div class="project-overlay" data-project-name="E-Commerce Platform"></div>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fa-solid fa-shopping-cart"></i>
+                        </div>
+                        <span class="project-status active">In Progress</span>
+                    </div>
+
+                    <h3 class="project-title">Modern E-Commerce</h3>
+                    <p class="project-description">Full-featured online shopping platform with payment integration and
+                        admin panel</p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="project-btn view-details" data-title="Modern E-Commerce Platform"
+                            data-desc="A fully-featured e-commerce platform with user authentication, product management, shopping cart, order processing, and payment integration. Includes admin dashboard for inventory and order management."
+                            data-tech="Django 4.x, PostgreSQL, React, Redux, Stripe API, AWS S3"
+                            data-features="User Authentication|Product Catalog|Shopping Cart|Payment Gateway|Order Management|Admin Dashboard|Inventory Tracking"
+                            data-demo="#" data-github="#" onclick="openProjectModal(this)">
+                            <i class="fa-solid fa-eye"></i>
+                            View Details
+                        </button>
+                        <a href="#" class="project-link" title="Preview">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Data Visualization Dashboard -->
+            <div class="portfolio-box" data-category="ai">
+                <div class="project-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+                        alt="Data Dashboard">
+                    <div class="project-overlay" data-project-name="Analytics Dashboard"></div>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-header">
+                        <div class="project-icon ai">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <span class="project-status">Completed</span>
+                    </div>
+
+                    <h3 class="project-title">Analytics Dashboard</h3>
+                    <p class="project-description">Interactive data visualization platform with real-time analytics and
+                        insights</p>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Plotly</span>
+                        <span class="tech-tag">Dash</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="project-btn view-details" data-title="Analytics Dashboard"
+                            data-desc="An interactive data visualization dashboard built with Plotly Dash. Features real-time data processing, multiple chart types, filtering capabilities, and export functionality. Perfect for business intelligence and data analysis."
+                            data-tech="Python 3.9+, Plotly Dash, Pandas, NumPy, SQLAlchemy"
+                            data-features="Real-time Analytics|Interactive Charts|Data Filtering|Export Reports|Multiple Data Sources|Responsive Design"
+                            data-demo="#" data-github="#" onclick="openProjectModal(this)">
+                            <i class="fa-solid fa-eye"></i>
+                            View Details
+                        </button>
+                        <a href="#" class="project-link" title="Live Dashboard">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="#" class="project-link" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Project Details Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-overlay" onclick="closeProjectModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProjectModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <div class="modal-links">
+                    <a href="#" id="modalDemoLink" class="modal-action-btn" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Live Demo
+                    </a>
+                    <a href="#" id="modalGithubLink" class="modal-action-btn secondary" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                        View Code
+                    </a>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-circle-info"></i> Project Overview</h3>
+                    <p id="modalDesc" class="modal-description"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-code"></i> Technologies Used</h3>
+                    <p id="modalTech" class="modal-tech-list"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-list-check"></i> Key Features</h3>
+                    <ul id="modalFeatures" class="modal-features-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         CONTACT SECTION - PROFESSIONAL DESIGN
+         ============================================ -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <!-- Section Header -->
+            <div class="contact-header">
+                <h2 class="heading">Get In <span>Touch</span></h2>
+                <p class="contact-subtitle">Have a question or want to work together? Drop me a message!</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Left Side: Contact Information -->
+                <div class="contact-info">
+                    <div class="info-header">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of
+                            your vision.</p>
+                    </div>
+
+                    <!-- Contact Cards -->
+                    <div class="contact-cards">
+                        <!-- Email Card -->
+                        <div class="contact-card">
+                            <div class="card-icon email-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Email</h4>
+                                <p>ragul.portfolio@gmail.com</p>
+                                <a href="mailto:ragul.portfolio@gmail.com" class="card-link">
+                                    Send Email <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Phone Card -->
+                        <div class="contact-card">
+                            <div class="card-icon phone-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Phone</h4>
+                                <p>+91 12345 67890</p>
+                                <a href="tel:+911234567890" class="card-link">
+                                    Call Me <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Location Card -->
+                        <div class="contact-card">
+                            <div class="card-icon location-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Location</h4>
+                                <p>Tamil Nadu, India</p>
+                                <a href="#" class="card-link">
+                                    View Map <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://linkedin.com" target="_blank" class="social-link linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="social-link github">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-link twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-link instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="form-header">
+                        <i class="fa-solid fa-paper-plane form-header-icon"></i>
+                        <h3>Send Me a Message</h3>
+                        <p>Fill out the form below and I'll get back to you as soon as possible</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user input-icon"></i>
+                                <input type="text" id="name" class="form-input" required>
+                                <label for="name" class="form-label">Full Name</label>
+                                <span class="input-border"></span>
+                            </div>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-envelope input-icon"></i>
+                                <input type="email" id="email" class="form-input" required>
+                                <label for="email" class="form-label">Email Address</label>
+                                <span class="input-border"></span>
+                            </div>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <!-- Phone & Subject Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-phone input-icon"></i>
+                                    <input type="tel" id="phone" class="form-input">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <span class="input-border"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-tag input-icon"></i>
+                                    <input type="text" id="subject" class="form-input">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <span class="input-border"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-group">
+                            <div class="textarea-wrapper">
+                                <i class="fa-solid fa-message textarea-icon"></i>
+                                <textarea id="message" class="form-textarea" required></textarea>
+                                <label for="message" class="form-label">Your Message</label>
+                                <span class="input-border"></span>
+                                <span class="char-counter"><span id="char-count">0</span>/500</span>
+                            </div>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                            <span class="btn-loader"></span>
+                        </button>
+                    </form>
+
+                    <!-- Form Stats -->
+                    <div class="form-stats">
+                        <div class="stat-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Your data is secure</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Response within 24 hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"><i class="fa-solid fa-circle-check"></i> Message Sent Successfully!</div>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2026 by Ragul.S | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/advanced-animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/about-animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/projects-data.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/projects-animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/certificates.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact-form.js') }}"></script>
+</body>
+
+</html>
